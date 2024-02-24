@@ -4,9 +4,13 @@ from scipy.interpolate import interp1d
 import imufusion
 import matplotlib.pyplot as pyplot
 import numpy
+import matplotlib
+matplotlib.use("TKAgg")
 
 # Import sensor data ("short_walk.csv" or "long_walk.csv")
-data = numpy.genfromtxt("short_walk.csv", delimiter=",", skip_header=1)
+# data = numpy.genfromtxt("short_walk.csv", delimiter=",", skip_header=1)
+data = numpy.genfromtxt("IMU_gait_walking_data.csv", delimiter=",", skip_header=1)
+
 
 sample_rate = 400  # 400 Hz
 
